@@ -4,8 +4,8 @@
       Hello, world! (Tailwind styled)
     </h1>
   </div>
-  <div class="flex items-center bg-cyan-200 m-2 p-2">
-    <p class="text-lg text-gray-700">Icon from Iconify:</p>
+  <div class="flex items-center bg-light m-2 p-2">
+    <p class="text-lg text-info font-bold">Icon from Iconify:</p>
     <Icon name="ci:list-checklist" size="32px" style="color: black" />
   </div>
 </template>

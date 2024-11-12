@@ -10,6 +10,7 @@ export default {
         warning: colors.yellow["500"],
         danger: colors.red["500"],
         info: colors.blue["500"],
+        light: colors.gray["100"],
       },
     },
   },
