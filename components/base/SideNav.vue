@@ -1,6 +1,16 @@
 <template>
   <div class="">
-    <PanelMenu :model="items" class="w-full md:w-80" />
+    <!-- Tailwind class can be used inside PrimeVue Passthrough without '!' -->
+    <PanelMenu
+      :model="items"
+      class="w-full md:w-80"
+      :pt="{
+        panel: { class: 'rounded-full' },
+        headerContent: { class: 'rounded-full' },
+        itemContent: { class: 'rounded-full' },
+        // style: { 'border-radius': '9999px' },
+      }"
+    />
   </div>
 </template>
 

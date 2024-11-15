@@ -23,10 +23,10 @@
           <Avatar label="U" size="xlarge" />
         </OverlayBadge>
       </div>
-      <div class="card flex flex-wrap">
-        <Badge value="8" size="xlarge" severity="success"></Badge>
+      <div class="card flex flex-wrap space-x-2">
+        <Badge value="8" size="xlarge" severity="success" class="m-2"></Badge>
         <Badge value="6" size="large" severity="warn"></Badge>
-        <Badge value="4" severity="info"></Badge>
+        <Badge value="4" severity="info" class="text-white"></Badge>
         <Badge value="2" size="small"></Badge>
       </div>
     </div>
@@ -35,6 +35,6 @@
 
 <script setup lang="ts">
 const toggleDarkMode = () => {
-  document.body.classList.toggle('app-dark');
+  document.body.classList.toggle('dark');
 };
 </script>
