@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-slate-700 text-white p-6 border-b-2 border-b-black">
+  <header class="bg-primary text-black dark:text-white p-6">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-lg sm:text-2xl font-semibold">Exercise 2</h1>
       <nav class="text-xs sm:text-base font-light">

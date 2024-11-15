@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-slate-700 text-white p-6 border-t-2 border-t-black">
-    <div class="container mx-auto flex justify-between">
+  <footer class="fixed z-50 bottom-0 flex flex-col w-full h-[120px]">
+    <div class="flex items-start justify-around">
       <div>
         <h2 class="text-base sm:text-xl font-semibold">Nuxt Exercises</h2>
         <p class="text-xs sm:text-sm font-light">Exercises to practice Nuxt</p>
