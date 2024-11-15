@@ -1,15 +1,6 @@
 <template>
   <div>
     <div>
-      <h1 class="text-3xl font-bold underline text-primary italic">
-        Hello, world! (Tailwind styled)
-      </h1>
-    </div>
-    <div class="flex items-center bg-light p-2 m-2">
-      <p class="text-lg text-info font-bold">Icon from Iconify:</p>
-      <Icon name="ci:list-checklist" size="32px" style="color: black" />
-    </div>
-    <div>
       <p class="text-xl font-bold">PrimeVue with Tailwind:</p>
       <Button label="Click me!" class="p-2" @click="toggleDarkMode" />
       <div>
@@ -31,6 +22,12 @@
         <OverlayBadge value="4" severity="danger" class="inline-flex">
           <Avatar label="U" size="xlarge" />
         </OverlayBadge>
+      </div>
+      <div class="card flex flex-wrap">
+        <Badge value="8" size="xlarge" severity="success"></Badge>
+        <Badge value="6" size="large" severity="warn"></Badge>
+        <Badge value="4" severity="info"></Badge>
+        <Badge value="2" size="small"></Badge>
       </div>
     </div>
   </div>

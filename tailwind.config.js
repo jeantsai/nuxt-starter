@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors');
 
 export default {
   theme: {
-    extend: {
+    // extend: {
       // colors: {
       //   primary: colors.teal['500'],
       //   secondary: colors.gray['500'],
@@ -12,6 +12,6 @@ export default {
       //   info: colors.blue['500'],
       //   light: colors.gray['100'],
       // },
-    },
+    // },
   },
 };

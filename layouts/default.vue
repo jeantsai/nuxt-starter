@@ -1,9 +1,13 @@
 <template>
-  <div id="MainLayout" class="h-screen bg-primary">
+  <div id="MainLayout" class="h-screen app-layout">
     <base-header @toggle-dark="toggleDark" />
-    <div class="flex h-screen bg-primary/75">
-      <base-side-nav />
-      <slot />
+    <div class="flex h-screen">
+      <div class="p-4">
+        <base-side-nav />
+      </div>
+      <div class="p-4">
+        <slot />
+      </div>
     </div>
     <base-footer />
   </div>

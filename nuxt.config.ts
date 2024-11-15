@@ -75,7 +75,7 @@ export default defineNuxtConfig({
       Inter: [100, 300, 400, 700],
     },
   },
-  css: ['~/assets/styles/main.css'],
+  css: ['~/assets/styles/app.css'],
   tailwindcss: {
     config: {
       theme: {
