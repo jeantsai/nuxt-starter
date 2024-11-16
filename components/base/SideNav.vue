@@ -1,96 +1,103 @@
 <template>
   <div class="">
     <!-- Tailwind class can be used inside PrimeVue Passthrough without '!' -->
-    <PanelMenu
+    <!-- <PanelMenu
       :model="items"
-      class="w-full md:w-80"
+      class="w-full md:w-64"
       :pt="{
-        panel: { class: 'rounded-full' },
         headerContent: { class: 'rounded-full' },
         itemContent: { class: 'rounded-full' },
-        // style: { 'border-radius': '9999px' },
       }"
-    />
+    /> -->
+    <!-- Tailwind class can be used inside PrimeVue Passthrough without '!' -->
+    <Menu
+      :model="items"
+      class="w-full md:w-64"
+      :pt="{
+        headerContent: { class: 'rounded-full' },
+        itemContent: { class: 'rounded-full' },
+      }"
+    ></Menu>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
+const router = useRouter();
+
 const items = ref([
   {
-    label: 'Files',
-    icon: 'pi pi-file',
+    label: 'Color',
+    icon: 'icon icon-colour-palette-bold',
     items: [
       {
-        label: 'Documents',
-        icon: 'pi pi-file',
-        items: [
-          {
-            label: 'Invoices',
-            icon: 'pi pi-file-pdf',
-            items: [
-              {
-                label: 'Pending',
-                icon: 'pi pi-stop',
-              },
-              {
-                label: 'Paid',
-                icon: 'pi pi-check-circle',
-              },
-            ],
-          },
-          {
-            label: 'Clients',
-            icon: 'pi pi-users',
-          },
-        ],
+        label: 'Core Colors',
+        icon: 'icon-[ri--color-filter-ai-line]',
+        command: () => {
+          router.push('/color/CoreColors');
+        },
       },
       {
-        label: 'Images',
-        icon: 'pi pi-image',
-        items: [
-          {
-            label: 'Logos',
-            icon: 'pi pi-image',
-          },
-        ],
+        label: 'Primay Colors',
+        icon: 'icon-[ri--color-filter-line]',
+        command: () => {
+          router.push('/color/PrimaryColors');
+        },
       },
     ],
   },
   {
-    label: 'Cloud',
-    icon: 'pi pi-cloud',
+    label: 'Icon',
+    icon: 'pi pi-font',
     items: [
       {
-        label: 'Upload',
-        icon: 'pi pi-cloud-upload',
+        label: 'PrimeVue Icons',
+        icon: 'pi pi-prime',
+        command: () => {
+          router.push('/icon/PrimeVueIcons');
+        },
       },
       {
-        label: 'Download',
-        icon: 'pi pi-cloud-download',
+        label: 'Iconify Icons',
+        icon: 'icon-[fluent--emoji-smile-slight-24-filled]',
+        command: () => {
+          router.push('/icon/IconifyIcons');
+        },
       },
       {
-        label: 'Sync',
-        icon: 'pi pi-refresh',
+        label: 'Momentum Icons',
+        icon: 'icon icon-colour-palette-bold',
+        command: () => {
+          router.push('/icon/MomentumIcons');
+        },
       },
     ],
   },
   {
-    label: 'Devices',
-    icon: 'pi pi-desktop',
+    label: 'Data',
+    icon: 'pi pi-table',
     items: [
       {
-        label: 'Phone',
-        icon: 'pi pi-mobile',
+        label: 'DataTable',
+        icon: 'pi pi-table',
+        command: () => {
+          router.push('/data/DataTable');
+        },
       },
       {
-        label: 'Desktop',
-        icon: 'pi pi-desktop',
+        label: 'TemplateTable',
+        icon: 'pi pi-table',
+        command: () => {
+          router.push('/data/TemplateTable');
+        },
       },
       {
-        label: 'Tablet',
-        icon: 'pi pi-tablet',
+        label: 'TreeTable',
+        icon: 'icon-[ri--node-tree]',
+        command: () => {
+          router.push('/data/TreeTable');
+        },
       },
     ],
   },

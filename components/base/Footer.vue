@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed z-50 bottom-0 flex flex-col w-full h-[120px]">
+  <footer class="z-50 flex flex-col w-full">
     <div class="flex items-start justify-around">
       <div>
         <h2 class="text-base sm:text-xl font-semibold">Nuxt Exercises</h2>

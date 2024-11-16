@@ -1,40 +1,19 @@
 <template>
-  <div>
-    <div>
-      <p class="text-xl font-bold">PrimeVue with Tailwind:</p>
-      <Button label="Click me!" class="p-2" @click="toggleDarkMode" />
-      <div>
-        <Avatar label="P" class="mr-2" size="xlarge" shape="circle" />
-        <Avatar
-          label="V"
-          class="mr-2"
-          size="large"
-          style="background-color: #ece9fc; color: #2a1261"
-          shape="circle"
-        />
-        <Avatar
-          label="U"
-          class="mr-2"
-          style="background-color: #dee9fc; color: #1a2551"
-          shape="circle"
-        />
-
-        <OverlayBadge value="4" class="inline-flex">
-          <Avatar label="U" size="xlarge" />
-        </OverlayBadge>
-      </div>
-      <div class="card flex flex-wrap space-x-2">
-        <Badge value="8" size="xlarge" severity="success" class="m-2"></Badge>
-        <Badge value="6" size="large" severity="warn"></Badge>
-        <Badge value="4" severity="info" class="text-white"></Badge>
-        <Badge value="2" size="small"></Badge>
-      </div>
+  <div class="p-24 container mx-auto">
+    <div class="">
+      <h1
+        class="text-surface-900 dark:text-surface-100 font-extrabold text-4xl tracking-tight sm:text-4xl sm:tracking-tight lg:text-5xl xl:text-6xl xl:tracking-tight"
+      >
+        A quick way for
+        <span class="app-title-blue">Our</span>
+        <br />internal <span class="app-title-green">Vue 3</span> project
+      </h1>
+      <p
+        class="mt-6 text-surface-600 dark:text-surface-300 text-md sm:text-lg lg:text-xl xl:text-2xl"
+      >
+        Powered by NuxtJS, TailwindCSS, PrimeVue, Iconify, Pinia, Vite, Vue 3
+        and more
+      </p>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-const toggleDarkMode = () => {
-  document.body.classList.toggle('dark');
-};
-</script>

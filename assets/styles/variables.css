@@ -1,6 +1,8 @@
 :root {
   --app-text: var(--p-surface-900);
-  --app-background: var(--p-surface-50);
+  --app-background: var(--p-surface-0);
+  --app-background-main: var(--p-surface-100);
+  --app-background-footer: var(--p-surface-50);
   {{/* --primary-text-color: var(--p-primary-600);
   --primary-color: var(--p-primary-color);
   --primary-contrast-color: var(--p-primary-contrast-color);
@@ -30,8 +32,9 @@
 
 :root.dark {
   --app-text: var(--p-surface-0);
-  --app-background: var(--p-surface-950);
-  --content-background: var(--p-surface-900);
+  --app-background: var(--p-surface-1100);
+  --app-background-main: var(--p-surface-900);
+  --app-background-footer: var(--p-surface-900);
   {{/* --primary-text-color: var(--p-primary-400);
   --primary-color: var(--p-primary-color);
   --primary-contrast-color: var(--p-primary-contrast-color);

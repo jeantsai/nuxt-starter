@@ -1,9 +1,31 @@
+@import '@momentum-design/icons/dist/data/MomentumFontIcons.min.css';
+@import 'primeicons/primeicons.css';
 @import './primevue.css';
 @import './variables.css';
 
 .app-layout {
-  color: var(--app-text);
-  background-color: var(--app-background);
+    color: var(--app-text);
+    background-color: var(--app-background);
+}
+
+.app-layout-main {
+    background-color: var(--app-background-main);
+}
+
+.app-layout-main-background {
+    background-color: var(--app-background-main);
+}
+
+.app-layout-footer {
+    background-color: var(--app-background-footer);
+}
+
+.app-title-blue {
+    color: var(--p-sky-600);
+}
+
+.app-title-green {
+    color: var(--p-green-600);
 }
 
 {{/*

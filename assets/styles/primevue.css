@@ -12,19 +12,98 @@
     --p-primary-900: #0A274A;
     --p-primary-950: #091A30;
     --p-surface-0: #ffffff;
-    --p-surface-50: #fafafa;
-    --p-surface-100: #f4f4f5;
-    --p-surface-200: #e4e4e7;
-    --p-surface-300: #d4d4d8;
-    --p-surface-400: #a1a1aa;
-    --p-surface-500: #71717a;
-    --p-surface-600: #52525b;
-    --p-surface-700: #3f3f46;
-    --p-surface-800: #27272a;
-    --p-surface-900: #18181b;
-    --p-surface-950: #09090b;
+    --p-surface-50: #f7f7f7;
+    --p-surface-100: #ededed;
+    --p-surface-200: #dedede;
+    --p-surface-300: #c9c9c9;
+    --p-surface-400: #adadad;
+    --p-surface-500: #8f8f8f;
+    --p-surface-600: #707070;
+    --p-surface-700: #545454;
+    --p-surface-800: #3b3b3b;
+    --p-surface-900: #262626;
+    --p-surface-950: #1a1a1a;
+    --p-surface-1000: #0f0f0f;
+    --p-surface-1100: #000000;
+    --p-gray-50: #f7f7f7;
+    --p-gray-100: #ededed;
+    --p-gray-200: #dedede;
+    --p-gray-300: #c9c9c9;
+    --p-gray-400: #adadad;
+    --p-gray-500: #8f8f8f;
+    --p-gray-600: #707070;
+    --p-gray-700: #545454;
+    --p-gray-800: #3b3b3b;
+    --p-gray-900: #262626;
+    --p-gray-950: #1a1a1a;
+    --p-sky-50: #edf8ff;
+    --p-sky-100: #dbf0ff;
+    --p-sky-200: #bfe3ff;
+    --p-sky-300: #96d0ff;
+    --p-sky-400: #64b4fa;
+    --p-sky-500: #3492eb;
+    --p-sky-600: #1170cf;
+    --p-sky-700: #0353a8;
+    --p-sky-800: #063a75;
+    --p-sky-900: #0a274a;
+    --p-sky-950: #091a30;
+    --p-green-50: #edf7f5;
+    --p-green-100: #cef5eb;
+    --p-green-200: #9fedd8;
+    --p-green-300: #68debd;
+    --p-green-400: #3cc29a;
+    --p-green-500: #27a17a;
+    --p-green-600: #1d805f;
+    --p-green-700: #185e46;
+    --p-green-800: #134231;
+    --p-green-900: #0e2b20;
+    --p-green-950: #0a1c15;
+    --p-red-50: #fff5f6;
+    --p-red-100: #ffe8ea;
+    --p-red-200: #ffd4da;
+    --p-red-300: #ffb8c1;
+    --p-red-400: #fc8b98;
+    --p-red-500: #f55868;
+    --p-red-600: #db1f2e;
+    --p-red-700: #ab0a15;
+    --p-red-800: #780d13;
+    --p-red-900: #4f0e10;
+    --p-red-950: #330d0e;
+    --p-orange-50: #fff6e3;
+    --p-orange-100: #ffebc2;
+    --p-orange-200: #ffda94;
+    --p-orange-300: #ffbe4f;
+    --p-orange-400: #f2990a;
+    --p-orange-500: #cf7900;
+    --p-orange-600: #a65e00;
+    --p-orange-700: #7d4705;
+    --p-orange-800: #57330a;
+    --p-orange-900: #36220c;
+    --p-orange-950: #24180b;
+
     --p-content-border-radius: 0;
+    --p-button-border-radius: 9999px;
+    --p-panelmenu-panel-border-width: 0;
 }
+
+.p-menu {
+    @apply border-0 app-layout-main-background;
+}
+.p-menu-item.p-focus .p-menu-item-content {
+    @apply bg-surface-300 dark:bg-surface-700 text-surface-800 dark:text-surface-0
+}
+.p-menu-item:not(.p-disabled) .p-menu-item-content:hover {
+    @apply bg-surface-200 dark:bg-surface-800 text-surface-800 dark:text-surface-0
+}
+
+.p-panelmenu-panel {
+    @apply border-0 app-layout-main-background;
+}
+
+.p-button {
+    @apply rounded-full px-4;
+}
+
 
 /* Light */
 :root {

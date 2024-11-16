@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const primeui = require('tailwindcss-primeui');
+const { addDynamicIconSelectors } = require('@iconify/tailwind');
 
 export default {
   // theme: {
@@ -18,5 +20,5 @@ export default {
     './app.vue',
     './error.vue',
   ],
-  plugins: [require('tailwindcss-primeui')],
+  plugins: [addDynamicIconSelectors(), primeui],
 };
