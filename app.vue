@@ -1,11 +1,10 @@
 <template>
-  <div>
+  <div class="fixed w-[calc(100%+1px)] h-screen">
     <!-- <NuxtRouteAnnouncer /> -->
     <!-- <NuxtWelcome /> -->
-    <div class="fixed w-[calc(100%+1px)] h-screen">
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </div>
+    <NuxtLoadingIndicator />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

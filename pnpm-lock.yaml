@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@primevue/forms':
+    specifier: ^4.2.2
+    version: 4.2.2(vue@3.5.12)
   nuxt:
     specifier: ^3.14.159
     version: 3.14.159(eslint@9.14.0)(typescript@5.6.3)(vite@5.4.10)
@@ -23,6 +26,9 @@ dependencies:
   vue-router:
     specifier: latest
     version: 4.4.5(vue@3.5.12)
+  zod:
+    specifier: ^3.23.8
+    version: 3.23.8
 
 devDependencies:
   '@iconify-json/f7':
@@ -1650,15 +1656,34 @@ packages:
   /@polka/url@1.0.0-next.28:
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
+  /@primeuix/forms@0.0.2:
+    resolution: {integrity: sha512-DpecPQd/Qf/kav4LKCaIeGuT3AkwhJzuHCkLANTVlN/zBvo8KIj3OZHsCkm0zlIMVVnaJdtx1ULNlRQdudef+A==}
+    engines: {node: '>=12.11.0'}
+    dependencies:
+      '@primeuix/utils': 0.3.1
+    dev: false
+
   /@primeuix/styled@0.3.0:
     resolution: {integrity: sha512-XsLbmyM1u50A0EDATIHyqm5O/zOCSyNKPk4pNN8HFvEPehbsjf4tkXcRZAyaVvntSCLpV4XGAj7v5EDCQkBRlg==}
     engines: {node: '>=12.11.0'}
     dependencies:
       '@primeuix/utils': 0.3.0
 
+  /@primeuix/styled@0.3.1:
+    resolution: {integrity: sha512-MIPtektNrFwEKJU0qXrguoultADtxMC39ghwXIGP3DR3zsB7vWk6VhJ1Mo7TxgWsVi3kHnh6g5v9X50eMFcBHw==}
+    engines: {node: '>=12.11.0'}
+    dependencies:
+      '@primeuix/utils': 0.3.1
+    dev: false
+
   /@primeuix/utils@0.3.0:
     resolution: {integrity: sha512-d6ymWez1n+iqwzAVhyOTmrOHl5qnSX2oGlTy97qGuA15gLai+MQaxONHFNdDia8Q7o396v7KK9IvhAx9VET/+A==}
     engines: {node: '>=12.11.0'}
+
+  /@primeuix/utils@0.3.1:
+    resolution: {integrity: sha512-KFJ8FylTX2j3AN6AvkF8JGSUNb7Dtqz1T5mlZnINDb6bwW+/V/d5wISiMEdhzdso69mmOX7IlYUDsj0w0pvxvA==}
+    engines: {node: '>=12.11.0'}
+    dev: false
 
   /@primevue/auto-import-resolver@4.2.1:
     resolution: {integrity: sha512-NR2jTme+R/p9oapvysh4y8vFR6/w2ymK4lOzx+pZHHb+QGh8lJvkvJ5NWhwOhO9YD4RGOlQGKA4kcY2Z1itafA==}
@@ -1676,6 +1701,28 @@ packages:
       '@primeuix/styled': 0.3.0
       '@primeuix/utils': 0.3.0
       vue: 3.5.12(typescript@5.6.3)
+
+  /@primevue/core@4.2.2(vue@3.5.12):
+    resolution: {integrity: sha512-ZxlbPBKTSpKN2mht2noiFQV689HH2KiM5yDxHyY0NJafxbB16SLgWWwRDcPulNrbLmu5e3joutTv5tB/52kvAQ==}
+    engines: {node: '>=12.11.0'}
+    peerDependencies:
+      vue: ^3.3.0
+    dependencies:
+      '@primeuix/styled': 0.3.1
+      '@primeuix/utils': 0.3.1
+      vue: 3.5.12(typescript@5.6.3)
+    dev: false
+
+  /@primevue/forms@4.2.2(vue@3.5.12):
+    resolution: {integrity: sha512-uCMi5tf5JgxnIM0ECQXn0nlxOmYEQSV6lsMWuuDifyk6u+d1MgZmzZMUbcpVlNczGuXFc86YMk1iOdzk3JjY/A==}
+    engines: {node: '>=12.11.0'}
+    dependencies:
+      '@primeuix/forms': 0.0.2
+      '@primeuix/utils': 0.3.1
+      '@primevue/core': 4.2.2(vue@3.5.12)
+    transitivePeerDependencies:
+      - vue
+    dev: false
 
   /@primevue/icons@4.2.1(vue@3.5.12):
     resolution: {integrity: sha512-TOhxgkcmgBqmlHlf2x+gs4874iHopkow0gRAC5FztZTgTZQrqy8hPIA9b4O1lW7P6GOjGuVIwSH8y2lw6Q8koA==}
@@ -7279,6 +7326,10 @@ packages:
       archiver-utils: 5.0.2
       compress-commons: 6.0.2
       readable-stream: 4.5.2
+
+  /zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+    dev: false
 
   engci-maven-blr.cisco.com/send@0.19.0:
     resolution: {integrity: sha512-dW41u5VfLXu8SJh5bwRmyYUbAoSB3c9uQh6L8h/KtsFREPWpbX1lrljJo186Jc4nmci/sGUZ9a0a0J2zgfq2hw==, tarball: https://engci-maven-blr.cisco.com/artifactory/api/npm/cctg-npm-npm/send/-/send-0.19.0.tgz}
