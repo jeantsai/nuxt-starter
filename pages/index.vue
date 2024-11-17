@@ -6,13 +6,13 @@
       >
         A quick way for
         <span class="app-title-blue">Our</span>
-        <br />internal <span class="app-title-green">Vue 3</span> project
+        <br />internal <span class="app-title-green">Vue 3</span> projects
       </h1>
       <p
         class="mt-6 text-surface-600 dark:text-surface-300 text-md sm:text-lg lg:text-xl xl:text-2xl"
       >
-        Powered by NuxtJS, TailwindCSS, PrimeVue, Iconify, Pinia, Vite, Vue 3
-        and more
+        Powered by NuxtJS and PrimeVue. Enable the posibility of teams with
+        tight resources and schedules.
       </p>
     </div>
   </div>
