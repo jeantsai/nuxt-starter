@@ -1,0 +1,16 @@
+# Variables
+
+@base_url = https://dummyjson.com
+
+# Auth
+
+## Login
+POST {{base_url}}/auth/login
+Content-Type: application/json
+Refer: http://localhost:3000
+Origin: http://localhost:3000
+
+{
+  "username": "emilys",
+  "password": "emilyspass"
+}

@@ -14,7 +14,7 @@
         Please login to continue
       </h1>
     </header>
-    <content>
+    <div>
       <Form
         v-slot="$form"
         :resolver="resolver"
@@ -25,34 +25,53 @@
         <div class="flex flex-col gap-1">
           <FloatLabel variant="on">
             <InputText
-              name="email"
-              type="text"
+              name="username"
+              autocomplete="username"
               fluid
               variant="outlined"
               class="outline-offset-4"
             />
-            <label for="email">Enter your email address</label>
+            <label for="username">Enter your name</label>
           </FloatLabel>
           <Message
-            v-if="$form.email?.invalid"
+            v-if="$form.username?.invalid"
             severity="error"
             size="small"
             variant="simple"
-            >{{ $form.email.error?.message }}</Message
+            >{{ $form.username.error?.message }}</Message
+          >
+          <FloatLabel variant="on">
+            <Password
+              name="password"
+              :feedback="false"
+              pt:pcInputText:root:autocomplete="current-password"
+              fluid
+              variant="outlined"
+              class="outline-offset-4"
+            />
+            <label for="password">Enter your password</label>
+          </FloatLabel>
+          <Message
+            v-if="$form.password?.invalid"
+            severity="error"
+            size="small"
+            variant="simple"
+            >{{ $form.password.error?.message }}</Message
           >
         </div>
-        <Button type="submit" severity="secondary">Next</Button>
+        <Button type="submit" severity="secondary">Login</Button>
       </Form>
-    </content>
+    </div>
     <footer class="flex fixed bottom-0 gap-2 p-1">
       <p class="text-surface-200">Don't have an account?</p>
-      <nuxt-link to="/auth/register" class="text-primary-500">Help</nuxt-link>
+      <!-- <nuxt-link to="#" class="text-primary-500">Help</nuxt-link> -->
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
 import InputText from 'primevue/inputtext';
+import Password from 'primevue/password';
 import { ref } from 'vue';
 import { zodResolver } from '@primevue/forms/resolvers/zod';
 import { useToast } from 'primevue/usetoast';
@@ -63,25 +82,47 @@ const initialValues = ref({
   email: '',
 });
 
-const resolver = ref(
-  zodResolver(
-    z.object({
-      email: z
-        .string()
-        .min(1, { message: 'Email is required.' })
-        .email({ message: 'Invalid email address.' }),
-    }),
-  ),
-);
+const Credentials = z.object({
+  username: z.string().min(1, { message: 'Username is required.' }),
+  // email: z
+  //   .string()
+  //   .min(1, { message: 'Email is required.' })
+  //   .email({ message: 'Invalid email address.' }),
+  password: z.string().min(1, { message: 'Password is required.' }),
+});
 
-const onFormSubmit = ({ valid }) => {
+const resolver = ref(zodResolver(Credentials));
+
+type Credentials = z.infer<typeof Credentials>;
+
+const { signIn } = useAuth();
+const route = useRoute();
+const originPath = (route.query.redirect as string) || '/';
+
+const onFormSubmit = async ({
+  valid,
+  values,
+}: {
+  valid: boolean;
+  values: Record<string, any>;
+}) => {
+  toast.add({
+    severity: 'success',
+    summary: 'Form is submitted.',
+    life: 3000,
+  });
   if (valid) {
     toast.add({
       severity: 'success',
       summary: 'Form is submitted.',
       life: 3000,
     });
-    router.push('/');
+    console.log('Form submitted values: ', values);
+    console.log('originPath: ', originPath);
+    await signIn(
+      { username: values.username, password: values.password },
+      { callbackUrl: originPath },
+    );
   }
 };
 
