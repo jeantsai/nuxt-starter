@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@primevue/forms": "^4.2.2",
+    "jsonwebtoken": "^9.0.2",
     "nuxt": "^3.14.159",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.1",

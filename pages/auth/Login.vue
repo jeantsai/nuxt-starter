@@ -74,14 +74,17 @@ const resolver = ref(
   ),
 );
 
-const onFormSubmit = ({ valid }) => {
+// const { signIn } = useAuth();
+// const router = useRouter();
+
+const onFormSubmit = ({ valid, values }) => {
   if (valid) {
     toast.add({
       severity: 'success',
       summary: 'Form is submitted.',
       life: 3000,
     });
-    router.push('/');
+    window.location.href = '/api/auth/login';
   }
 };
 
