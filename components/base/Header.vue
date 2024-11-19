@@ -1,18 +1,10 @@
 <template>
   <header class="px-7 py-5">
     <div class="flex justify-between items-center">
-      <NuxtLink to="/" class="text-lg sm:text-2xl font-semibold">
-        Tailwind PrivmVue Styling Exercise
+      <NuxtLink to="/" class="text-lg sm:text-2xl font-semibold text-primary">
+        PrivmVue Demo
+        <span class="text-surface-400 text-sm">styled by Momentum Design</span>
       </NuxtLink>
-      <nav class="text-xs sm:text-base font-light">
-        <ul class="flex space-x-4">
-          <li v-for="navLink in navLinks" :key="navLink.name">
-            <a :href="navLink.path" class="hover:text-primary">
-              {{ navLink.name }}
-            </a>
-          </li>
-        </ul>
-      </nav>
       <i
         class="icon"
         :class="{
