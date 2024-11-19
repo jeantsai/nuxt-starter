@@ -90,10 +90,14 @@
     @apply border-0 app-layout-main-background;
 }
 .p-menu-item.p-focus .p-menu-item-content {
-    @apply bg-surface-300 dark:bg-surface-700 text-surface-800 dark:text-surface-0
+    @apply bg-surface-300 dark:bg-surface-700 text-surface-700 dark:text-surface-0
 }
 .p-menu-item:not(.p-disabled) .p-menu-item-content:hover {
-    @apply bg-surface-200 dark:bg-surface-800 text-surface-800 dark:text-surface-0
+    @apply bg-surface-200 dark:bg-surface-800 text-black dark:text-surface-0
+}
+
+.p-menu-list {
+    @apply gap-0
 }
 
 .p-panelmenu-panel {

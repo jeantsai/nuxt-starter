@@ -2,8 +2,11 @@
   <header class="px-7 h-[76px] flex w-full">
     <div class="flex justify-between items-center self-center w-full">
       <div>
-        <NuxtLink to="/" class="text-lg sm:text-2xl font-semibold">
-          Tailwind PrivmVue Styling Exercise
+        <NuxtLink to="/" class="text-lg sm:text-2xl font-semibold text-primary">
+          PrivmVue Demo
+          <span class="text-surface-400 text-sm"
+            >styled by Momentum Design</span
+          >
         </NuxtLink>
         <nav class="text-xs sm:text-base font-light">
           <ul class="flex space-x-4">
