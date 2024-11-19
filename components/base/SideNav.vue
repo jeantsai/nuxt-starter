@@ -12,7 +12,7 @@
     <!-- Tailwind class can be used inside PrimeVue Passthrough without '!' -->
     <Menu
       :model="items"
-      class="w-full md:w-64"
+      class="w-full md:w-64 text-sm"
       :pt="{
         headerContent: { class: 'rounded-full' },
         itemContent: { class: 'rounded-full' },
