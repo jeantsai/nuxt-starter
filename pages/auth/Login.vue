@@ -128,7 +128,7 @@ const onFormSubmit = async ({
 
 definePageMeta({
   layout: false,
-  // auth: false,
+  auth: false,
   // middleware: 'guest',
 });
 </script>
