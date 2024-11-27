@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@primevue/nuxt-module',
     '@sidebase/nuxt-auth',
+    '@nuxt/test-utils',
   ],
   // googleFonts: {
   //   families: {
@@ -74,6 +75,11 @@ export default defineNuxtConfig({
       pages: {
         login: '/auth/login',
       },
+    },
+  },
+  app: {
+    head: {
+      title: 'Nuxt template with Tailwind-PrimeVue, and Nuxt Auth',
     },
   },
 });
