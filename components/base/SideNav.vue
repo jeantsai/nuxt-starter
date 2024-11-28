@@ -13,6 +13,7 @@
     <Menu
       :model="items"
       class="w-full md:w-64"
+      aria-label="SideMenu"
       :pt="{
         headerContent: { class: 'rounded-full' },
         itemContent: { class: 'rounded-full' },
