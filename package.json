@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev4test": "NUXT_DEVTOOLS=false nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
@@ -23,6 +24,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "@iconify-json/f7": "^1.2.1",
     "@iconify-json/fluent": "^1.2.7",
     "@iconify-json/ri": "^1.2.3",

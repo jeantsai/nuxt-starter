@@ -1,11 +1,11 @@
 <template>
-  <header class="px-7 h-[76px] flex w-full">
+  <header class="px-7 h-[76px] flex w-full" role="banner">
     <div class="flex justify-between items-center self-center w-full">
-      <div>
+      <h1>
         <NuxtLink to="/" class="text-lg sm:text-2xl font-semibold">
           Tailwind PrivmVue Styling Exercise
         </NuxtLink>
-      </div>
+      </h1>
       <div class="flex items-center">
         <i
           class="icon m-6"

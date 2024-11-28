@@ -1,5 +1,5 @@
 <template>
-  <footer class="z-50 flex flex-col w-full">
+  <div class="z-50 flex flex-col w-full">
     <div
       class="flex items-start justify-between px-8 text-surface-800 dark:text-surface-100"
     >
@@ -27,7 +27,7 @@
         &copy; {{ new Date().getFullYear() }} Nuxt Exercises
       </p>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script setup lang="ts"></script>

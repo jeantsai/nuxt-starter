@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <nav class="" role="navigation">
     <!-- Tailwind class can be used inside PrimeVue Passthrough without '!' -->
     <!-- <PanelMenu
       :model="items"
@@ -19,7 +19,7 @@
         itemContent: { class: 'rounded-full' },
       }"
     ></Menu>
-  </div>
+  </nav>
 </template>
 
 <script setup>

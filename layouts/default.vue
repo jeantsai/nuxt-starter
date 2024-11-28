@@ -1,8 +1,9 @@
 <template>
   <div id="MainLayout" class="h-screen app-layout">
     <base-header />
-    <div
+    <main
       class="flex h-full w-full app-layout-main border-t-[1px] border-t-neutral-300 dark:border-t-neutral-700"
+      role="main"
     >
       <div class="p-4">
         <base-side-nav />
@@ -17,6 +18,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
   </div>
 </template>

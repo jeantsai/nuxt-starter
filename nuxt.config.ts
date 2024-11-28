@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   ssr: false,
   devtools: {
-    enabled: true,
+    enabled: process.env.NUXT_DEVTOOLS !== 'false',
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -79,6 +79,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en', // Set the language for the HTML document
+      },
       title: 'Nuxt template with Tailwind-PrimeVue, and Nuxt Auth',
     },
   },
